@@ -3,14 +3,15 @@ package ch.helusa.persistence.model.customer;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "PROPERTY_OWNER")
 public class PropertyOwner {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
+    @OneToOne
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
 
     private String name;

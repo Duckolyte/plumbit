@@ -4,14 +4,11 @@ import javax.persistence.*;
 import java.util.Locale;
 
 @Entity
+@Table(name = "ADDRESS")
 public class Address {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-
-    @OneToOne
-    @JoinColumn(name = "id", nullable = false)
-    private Property property;
 
     private String street;
     private String houseNumber;
