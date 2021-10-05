@@ -1,4 +1,4 @@
-package ch.helusa.persistence.service.example;
+package ch.helusa.persistence.config.example;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

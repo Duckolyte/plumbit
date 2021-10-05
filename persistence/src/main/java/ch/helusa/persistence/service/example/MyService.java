@@ -1,5 +1,6 @@
 package ch.helusa.persistence.service.example;
 
+import ch.helusa.persistence.config.example.ServiceProperties;
 import ch.helusa.persistence.model.example.Customer;
 import ch.helusa.persistence.repository.example.CustomerRepository;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
