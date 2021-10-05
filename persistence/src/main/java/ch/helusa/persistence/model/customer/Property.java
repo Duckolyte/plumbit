@@ -1,7 +1,9 @@
 package ch.helusa.persistence.model.customer;
 
 import javax.persistence.*;
+import java.util.List;
 
+@Entity
 public class Property {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -9,10 +11,9 @@ public class Property {
 
     @OneToMany(mappedBy = "propertyOwner", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
-    private PropertyOwner propertyOwner;
+    private List<PropertyOwner> propertyOwner;
 
     @OneToOne(mappedBy = "address", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
     private Address address;
 
     @OneToOne(mappedBy = "renter", cascade = CascadeType.ALL)

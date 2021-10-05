@@ -13,9 +13,28 @@ public class Renter {
     @PrimaryKeyJoinColumn
     private Person person;
 
-    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "property", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
-    private Address address;
+    private Property property;
 
+    public Renter() {
+    }
 
+    public Renter(Long id, Person person, Property property) {
+        this.id = id;
+        this.person = person;
+        this.property = property;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public Property getProperty() {
+        return property;
+    }
 }
