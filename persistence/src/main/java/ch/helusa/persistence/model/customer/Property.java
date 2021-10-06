@@ -1,7 +1,6 @@
 package ch.helusa.persistence.model.customer;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "PROPERTY")
