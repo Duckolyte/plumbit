@@ -1,3 +1,25 @@
 {
-  ""
+  "propertyOwner": {
+    "name": "test property owner name",
+    "address": {
+      "street": "test property owner street",
+      "houseNumber": "1",
+      "postalCode": "8004",
+      "city": "Zürich",
+      "locale": "GERMAN"
+    }
+  },
+  "address": {
+    "street": "test property street",
+    "houseNumber": "2",
+    "postalCode": "5000",
+    "city": "Aarau",
+    "locale": "ch"
+  },
+  "renter": {
+    "person": {
+      "firstName": "Test renter firstname",
+      "lastName": "Test renter lastname"
+    }
+  }
 }

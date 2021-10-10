@@ -10,21 +10,16 @@ public class Renter {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person person;
-
-    @OneToOne
-    @JoinColumn(name = "property_id", referencedColumnName = "id")
-    private Property property;
 
     public Renter() {
     }
 
-    public Renter(Long id, Person person, Property property) {
+    public Renter(Long id, Person person) {
         this.id = id;
         this.person = person;
-        this.property = property;
     }
 
     public Long getId() {
@@ -33,9 +28,5 @@ public class Renter {
 
     public Person getPerson() {
         return person;
-    }
-
-    public Property getProperty() {
-        return property;
     }
 }
