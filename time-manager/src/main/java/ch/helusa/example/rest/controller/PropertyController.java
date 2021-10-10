@@ -17,19 +17,19 @@ public class PropertyController {
 
     @GetMapping("/property/{id}")
     @ResponseBody
-    public Property getCustomerById(@PathVariable long id) {
+    public Property getPropertyById(@PathVariable long id) {
         return propertyService.findPropertyById(id);
     }
 
     @GetMapping("/property")
     @ResponseBody
-    public List<Property> getCustomerById() {
+    public List<Property> getProperties() {
         return propertyService.findAllProperties();
     }
 
     @PostMapping("/property")
     @ResponseBody
-    public Property createCustomer(@RequestBody Property property) {
+    public Property createProperty(@RequestBody Property property) {
         return propertyService.saveProperty(property);
     }
 

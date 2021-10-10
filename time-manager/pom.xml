@@ -46,6 +46,11 @@
             <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>ch.helusa</groupId>
+            <artifactId>swagger</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

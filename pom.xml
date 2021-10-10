@@ -8,6 +8,7 @@
         <module>core</module>
         <module>persistence</module>
         <module>time-manager</module>
+        <module>swagger</module>
     </modules>
 
     <groupId>ch.helusa</groupId>
