@@ -1,0 +1,17 @@
+##
+## ENV: TEST
+##
+
+service:
+  message: Hello, World
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/plumbit?createDatabaseIfNotExist=true
+    username: plumbit-tcu
+    password: 12345
+    driver-class-name: com.mysql.jdbc.Driver

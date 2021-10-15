@@ -1,13 +1,11 @@
 # plumbit
-Time managment project.
+A time and material management project.
 
-# Continue with
-multi module project
-https://spring.io/guides/gs/multi-module/
+### 1. Run as docker
 
-web
-https://spring.io/guides/gs/spring-boot/
-https://spring.io/guides/gs/spring-boot/#initial
+#### 1.1 Build the docker image
+Run the follwoing command in the project directory.
+> docker build -t plumbit-1.0  -f Dockerfile .
 
-jpa
-https://spring.io/guides/gs/accessing-data-jpa/
+#### 1.2 Run the image from 1.1 as container
+> docker run -p 8080:8080 plumbit-1.0
