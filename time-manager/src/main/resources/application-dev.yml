@@ -2,3 +2,13 @@
 ## ENV: DEV
 ##
 
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:plumbit
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
