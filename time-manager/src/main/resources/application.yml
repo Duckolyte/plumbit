@@ -6,3 +6,16 @@ spring:
     hibernate:
       ddl-auto: update
     generate-ddl: true
+
+keycloak:
+  auth-server-url: http://localhost:8081/auth
+  realm: plumbit
+  resource: plumbit-client
+  public-client: true
+  security-constraints:
+    - authRoles:
+      - user
+      securityCollections:
+      - patterns:
+        - /customers/*
+  principal-attribute: preferred_username

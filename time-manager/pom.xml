@@ -35,6 +35,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!-- project dependencies -->
         <dependency>
             <groupId>ch.helusa</groupId>
@@ -49,6 +50,11 @@
         <dependency>
             <groupId>ch.helusa</groupId>
             <artifactId>swagger</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.helusa</groupId>
+            <artifactId>security</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

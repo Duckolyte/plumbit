@@ -9,6 +9,7 @@
         <module>persistence</module>
         <module>time-manager</module>
         <module>swagger</module>
+        <module>security</module>
     </modules>
 
     <groupId>ch.helusa</groupId>
