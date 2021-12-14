@@ -15,3 +15,7 @@ Run the follwoing command in the project directory.
 
 #### 2. Run docker comopse
 > docker-compose up
+
+
+### 3. Test with swagger in the browser
+Open: "http://localhost:8080/swagger-ui/#/"
