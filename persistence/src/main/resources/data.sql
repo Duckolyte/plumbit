@@ -1,4 +1,4 @@
-/*INSERT INTO PERSON (id, firstname, lastname) VALUES
+INSERT INTO PERSON (id, firstname, lastname) VALUES
 (1, 'Testfirstname0', 'Testlastname0');
 
 INSERT INTO ADDRESS (id, street, houseNumber, postalCode, city, locale) VALUES
@@ -13,5 +13,3 @@ INSERT INTO PROPERTY_OWNER (id, address, name) VALUES
 
 INSERT INTO RENTER (id, person, property) VALUES
 (1, 1, 1);
-
-*/
