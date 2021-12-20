@@ -33,27 +33,11 @@ class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests();
-        // call to super would trigger spring security issue 9787
-        // super.configure(http);
-
-        // taken from KeycloakWebSecurityConfigurerAdapter and worker around to avoid spring security issue 9787
-        http
-                .csrf().requireCsrfProtectionMatcher(keycloakCsrfRequestMatcher())
-                .and()
-                .sessionManagement()
-                .sessionAuthenticationStrategy(sessionAuthenticationStrategy())
-                .and()
-                .addFilterBefore(keycloakPreAuthActionsFilter(), LogoutFilter.class)
-                .addFilterBefore(keycloakAuthenticationProcessingFilter(), LogoutFilter.class)
-                .addFilterAfter(keycloakSecurityContextRequestFilter(), SecurityContextHolderAwareRequestFilter.class)
-                .addFilterAfter(keycloakAuthenticatedActionsRequestFilter(), SecurityContextHolderAwareRequestFilter.class)
-                .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint())
-                .and()
-                .logout()
-                .addLogoutHandler(keycloakLogoutHandler())
-                .logoutUrl("/sso/logout").permitAll()
-                .logoutSuccessUrl("/");
+        http.authorizeRequests()
+                .antMatchers("/customers*")
+                .hasRole("user")
+                .anyRequest()
+                .permitAll();
     }
 
 }
