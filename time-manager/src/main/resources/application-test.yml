@@ -11,7 +11,7 @@ spring:
       ddl-auto: update # Remove when developing with config dev on container.
   sql:
     init:
-      mode: always # Remove when developing with config dev on container.
+      mode: never # Remove when developing with config dev on container.
   datasource:
     url: jdbc:mysql://localhost:3306/plumbit?createDatabaseIfNotExist=true
     username: plumbit-tcu
