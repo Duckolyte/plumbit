@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication(scanBasePackages = "ch.helusa")
 @EnableJpaRepositories("ch.helusa.persistence.repository.*")
-@EntityScan("ch.helusa.persistence.model.*")
+@EntityScan(basePackages = "ch.helusa.persistence.model")
 @RestController
 public class DemoApplication {
 

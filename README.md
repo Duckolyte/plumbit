@@ -18,4 +18,5 @@ Run the follwoing command in the project directory.
 
 
 ### 3. Test with swagger in the browser
-Open: "http://localhost:8080/swagger-ui/#/"
+Open the following url in the browser: 
+> http://localhost:8080/swagger-ui/#/

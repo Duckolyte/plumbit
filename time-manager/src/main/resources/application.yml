@@ -6,6 +6,9 @@ spring:
     hibernate:
       ddl-auto: update
     generate-ddl: true
+  sql:
+    init:
+      mode: never
 
 keycloak:
   auth-server-url: http://localhost:8081/auth
