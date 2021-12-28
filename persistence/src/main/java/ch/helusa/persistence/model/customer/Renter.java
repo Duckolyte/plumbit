@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Renter {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @OneToOne(cascade = CascadeType.ALL)

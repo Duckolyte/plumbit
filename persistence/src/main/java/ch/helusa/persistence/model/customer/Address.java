@@ -7,19 +7,19 @@ import java.util.Locale;
 @Table(name = "ADDRESS")
 public class Address {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     private String street;
     private String houseNumber;
     private String postalCode;
     private String city;
-    private Locale locale;
+    private String locale;
 
     public Address() {
     }
 
-    public Address(Long id, String street, String houseNumber, String postalCode, String city, Locale locale) {
+    public Address(Long id, String street, String houseNumber, String postalCode, String city, String locale) {
         this.id = id;
         this.street = street;
         this.houseNumber = houseNumber;
@@ -48,7 +48,7 @@ public class Address {
         return city;
     }
 
-    public Locale getLocale() {
+    public String getLocale() {
         return locale;
     }
 }
