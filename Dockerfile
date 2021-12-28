@@ -5,13 +5,6 @@
 #
 FROM maven:3.8.1-jdk-11-slim as MAVEN_BUILD_ENV
 
-#COPY ./time-manager/pom.xml /tmp/
-#COPY ./time-manager/src /tmp/src/
-#
-#COPY ./swagger/target/swagger-2.5.0.jar /tmp/libs/swagger-2.5.0.jar
-#COPY ./persistence/target/persistence-2.5.0.jar /tmp/libs/persistence-2.5.0.jar
-#COPY ./core/target/core-2.5.0.jar /tmp/libs/core-2.5.0.jar
-
 COPY core /tmp/core
 COPY persistence /tmp/persistence
 COPY security /tmp/security
@@ -54,4 +47,3 @@ COPY --from=MAVEN_BUILD_ENV ${TIMEZONE_FILE} ${TIMEZONE_FILE}
 USER java:java
 
 ENTRYPOINT ["java", "-XX:+UseSerialGC", "-Xss512k", "-Dspring.profile.active=dev", "-jar", "/time-manager-2.5.7.jar"]
-# ENTRYPOINT ["java", "-XX:+UseSerialGC", "-Xss512k", "-Dspring.config.additional-location=/config/mandant-config.yml,/config/env-config.yml,/config/secrets.yml", "-jar", "/time-manager-2.5.0.jar"]

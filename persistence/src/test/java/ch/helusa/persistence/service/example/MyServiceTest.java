@@ -11,8 +11,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 @SpringBootTest("service.message=Hello")
-@EnableJpaRepositories("ch.helusa.persistence.repository.*")
-@EntityScan("ch.helusa.persistence.model.*")
+@EnableJpaRepositories("ch.helusa.persistence.*")
+@EntityScan("ch.helusa.persistence.*")
 public class MyServiceTest {
 
     @Autowired

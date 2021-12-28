@@ -1,3 +1,6 @@
+-- This file was renamed from data.sql to test-data.sql and therefore is not in use on startup anymore.
+-- The file remains only for documentation.
+
 INSERT INTO PERSON (id, first_name, last_name) VALUES
 (1, 'Testfirstname0', 'Testlastname0');
 

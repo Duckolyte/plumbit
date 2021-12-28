@@ -20,5 +20,5 @@ keycloak:
       - user
       securityCollections:
       - patterns:
-        - /customers/*
+        - /property/*
   principal-attribute: preferred_username
